@@ -15,8 +15,8 @@
   
           <div class="container">
             <div class="carousel-caption text-start">
-              <h1>Example headline.</h1>
-              <p>Some representative placeholder content for the first slide of the carousel.</p>
+              <h1>Motorcycle</h1>
+              <p>Motor mantap sekali broku,nande hiyahiya hiyaah</p>
               <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
             </div>
           </div>
@@ -26,8 +26,8 @@
   
           <div class="container">
             <div class="carousel-caption">
-              <h1>Another example headline.</h1>
-              <p>Some representative placeholder content for the second slide of the carousel.</p>
+              <h1>Mobil Sport Mahal</h1>
+              <p>Mobil Sport mahal yang hanya bisa dibeli oleh orang yang memiliki uang banyak</p>
               <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
             </div>
           </div>
@@ -37,8 +37,8 @@
   
           <div class="container">
             <div class="carousel-caption text-end">
-              <h1>One more for good measure.</h1>
-              <p>Some representative placeholder content for the third slide of this carousel.</p>
+              <h1>Ducati Motor</h1>
+              <p>Motor ducati yang sangat mantap dan juga sangat mahal tentunya.</p>
               <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
             </div>
           </div>

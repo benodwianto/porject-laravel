@@ -4,15 +4,15 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class HomeController extends Controller
+class BarangController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view('home', [
-            'title' => 'Home'
+        return view('beli', [
+            'title' => 'Beli'
         ]);
     }
 
@@ -21,7 +21,7 @@ class HomeController extends Controller
      */
     public function create()
     {
-        //
+        return view('', []);
     }
 
     /**

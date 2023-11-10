@@ -6,10 +6,10 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.84.0">
-    <title>Jua Barang</title>
+    <title>Jua Barang | Halaman {{ $title }}</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/carousel/">
-
+    <script src="https://unpkg.com/feather-icons"></script>
     
 
     <!-- Bootstrap core CSS -->
@@ -49,10 +49,6 @@
   <p>&copy; 2017–2021 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
 </footer>
 </main>
-
-
-  <script src="/js/carousel.js"></script>
-
     
 </body>
 </html>
