@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Barang;
 
 class BarangController extends Controller
 {
@@ -11,14 +12,20 @@ class BarangController extends Controller
      */
     public function index()
     {
-        return view('beli', [
-            'title' => 'Beli'
+        return view('belis', [
+            'title' => 'Beli',
+            'barang' => Barang::latest()->filter(request(['cari', 'kategori']))->paginate(40)->withQueryString(),
         ]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
+    public function tampilan(Barang $barang)
+    {
+        return view('beli', [
+            'title' => 'Beli',
+            'barang' => $barang->load('kategori'),
+        ]);
+    }
+
     public function create()
     {
         return view('', []);
@@ -37,7 +44,6 @@ class BarangController extends Controller
      */
     public function show(string $id)
     {
-        //
     }
 
     /**

@@ -4,6 +4,10 @@ use App\Http\Controllers\BarangController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\InputController;
+use App\Http\Controllers\LoginController;
+use App\Models\Kategori;
+use App\Models\Barang;
+use Illuminate\Auth\Events\Login;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,10 +30,19 @@ Route::get('/ben', function () {
     return "Hello Beno Dwianto";
 });
 
-Route::get('/beli', [BarangController::class, 'index']);
+Route::get('/belis', [BarangController::class, 'index']);
+Route::get('/beli/{Barang:jenisbarang}', [BarangController::class, 'tampilan']);
+Route::get('/kategori/{kategori:nama_kategori}', function (Kategori $kategori) {
+    return view('/kategori', [
+        'title' => $kategori->nama_kategori,
+        'barang' => $kategori->barang,
+        'kategori' => $kategori->nama_kategori,
+    ]);
+});
 
+Route::get('/login', [LoginController::class, 'index']);
 
-
+Route::post('/register', [LoginController::class, 'register']);
 
 
 

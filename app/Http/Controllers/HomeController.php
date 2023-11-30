@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use \App\Models\Barang;
 
 class HomeController extends Controller
 {
@@ -12,7 +13,9 @@ class HomeController extends Controller
     public function index()
     {
         return view('home', [
-            'title' => 'Home'
+            'title' => 'Home',
+            'barang' => Barang::latest()->filter(request(['cari', 'kategori']))->paginate(6)->withQueryString(),
+
         ]);
     }
 
