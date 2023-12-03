@@ -78,22 +78,22 @@
 
       <!-- Right -->
       <div>
-        <a href="https://www.facebook.com/" class="text-white">
+        <a href="https://www.instagram.com/bendwwta/" class="text-white">
           <i class="bi bi-instagram fs-5 p-1 rounded bg-primary"></i></i>
         </a>
         <a href="" class="text-white ">
           <i class="bi bi-x fs-5 p-1 rounded bg-dark"></i></i>
         </a>
-        <a href="" class="text-white ">
+        <a href="https://www.youtube.com/?hl=ID" class="text-white ">
           <i class="bi bi-youtube fs-5 p-1 rounded bg-danger"></i>
         </a>
-        <a href="" class="text-white ">
+        <a href="https://web.facebook.com/beno.dwianto.39" class="text-white ">
           <i class="bi bi-facebook fs-5 p-1 rounded bg-primary"></i></i></i>
         </a>
-        <a href="" class="text-white ">
+        <a href="https://www.linkedin.com/in/beno-dwianto-b9372a294/" class="text-white ">
           <i class="bi bi-linkedin fs-5 p-1 rounded bg-info"></i></i>
         </a>
-        <a href="" class="text-white ">
+        <a href="https://github.com/benodwianto" class="text-white ">
           <i class="bi bi-github fs-5 p-1 rounded bg-dark"></i>
         </a>
       </div>

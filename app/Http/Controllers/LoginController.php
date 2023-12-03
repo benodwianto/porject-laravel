@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
@@ -13,15 +14,29 @@ class LoginController extends Controller
         ]);
     }
 
-    public function register(Request $request)
+    public function sign(Request $request)
     {
-        $request->validate([
-            'name' => 'required|max:255',
-            'username' => 'required|min:3|max:255|unique:users',
-            'email' => 'required|unique:users',
-            'password' => 'required|min:3'
+        $data = $request->validate([
+            'email' => 'required|email:dns',
+            'password' => 'required',
         ]);
 
-        dd('good');
+        if (Auth::attempt($data)) {
+            $request->session()->regenerate();
+            return redirect('/');
+        }
+
+        return redirect('/login')->with('logerr', 'Signin Failed!');
+    }
+
+    public function logout(Request $request)
+    {
+        Auth::logout();
+
+        $request->session()->invalidate();
+
+        $request->session()->regenerateToken();
+
+        return redirect('/');
     }
 }

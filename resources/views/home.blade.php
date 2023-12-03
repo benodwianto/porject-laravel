@@ -2,7 +2,7 @@
 
 @section('container')
 <main>
-  <nav class="navbar navbar-light bg-light mb-4">
+  <nav class="navbar navbar-light bg-light mb-4 mt-10">
     <div class="container-fluid">
         <div class="dropdown">
           <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
