@@ -1,5 +1,5 @@
 <header style="background-color: $gray-400;">
-  <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
+  <nav class="navbar navbar-expand-md navbar-light fixed-top" style="background-color:#31c491;">
     <div class="container-fluid fs-5">
       <a class="navbar-brand" href="/"><h3 class="d-inline">GegePedia</h3></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -14,15 +14,16 @@
             <a class="nav-link" href="/kategori">Promo</a>
           </li>
 
-          {{-- <li class="nav-item dropdown">
+          <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Kategori
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              @foreach ($barang as $brg)
-                <li><a class="dropdown-item" href="/belis?kategori={{ $brg->kategori->nama_kategori }}">{{ $brg->kategori->nama_kategori }}</a></li>
-              @endforeach
-            </ul> --}}
+              
+                @foreach ($kategori_list as $kategori)
+                <li><a class="dropdown-item" href="{{ url('/belis?kategori='. $kategori->nama_kategori) }}">{{ $kategori->nama_kategori }}</a></li>
+                @endforeach
+            </ul>
           </li>
 
           <li class="nav-item">
@@ -31,6 +32,13 @@
           <li class="nav-item">
             <a class="nav-link" href="/dashboard">| <i class="bi bi-shop"></i> <small>toko</small></a>
           </li>
+          {{-- <li class="nav-link">
+            <form class="d-flex" action="/belis">
+              @csrf
+              <input class="form-control me-2" name="cari" type="search" placeholder="Cari Barang.." aria-label="Search" style="width:400px">
+              <button class="btn btn-outline-info" type="submit" >Search</button>
+            </form>
+          </li> --}}
         </ul>
         <ul class="navbar-nav ms-auto">
           @auth
@@ -74,3 +82,4 @@
     </div>
   </nav>
 </header>
+

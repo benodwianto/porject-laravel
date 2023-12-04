@@ -8,11 +8,11 @@
           Pilih Kategori
         </a>
       
-        {{-- <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-          <li><a class="dropdown-item" href="/kategori/{{ $barang[0]->kategori->nama_kategori }}">{{ $barang[0]->kategori->nama_kategori }}</a></li>
-          <li><a class="dropdown-item" href="/kategori/{{ $barang[1]->kategori->nama_kategori }}">{{ $barang[1]->kategori->nama_kategori }}</a></li>
-          <li><a class="dropdown-item" href="/kategori/{{ $barang[2]->kategori->nama_kategori }}">{{ $barang[2]->kategori->nama_kategori }}</a></li>
-        </ul> --}}
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+          @foreach ($kategori_list as $kategori)
+          <li><a class="dropdown-item" href="{{ url('/belis?kategori='. $kategori->nama_kategori) }}">{{ $kategori->nama_kategori }}</a></li>
+          @endforeach
+        </ul>
       </div>
     <form class="d-flex" action="/belis">
       @if (request('kategori'))
@@ -42,8 +42,8 @@
               <p class="card-text d-inline" style="margin-right: 1rem">
                 Kategori : <a href="/belis?kategori={{ $brg->kategori->nama_kategori }}" style="text-decoration: none">{{ $brg->kategori->nama_kategori }}</a>
               </p>
-              <p class="card-text d-inline"><b>Rp. {{ $brg->harga }}</b></p>
-              <p class="card-text">Stok : {{ $brg->stok }}</p>
+              <p class="card-text d-inline-block mb-0"><b>Rp. {{ $brg->harga }}</b></p>
+              <p class="card-text mb-0">Stok : {{ $brg->stok }}</p>
               <p class="card-text"> {{ $brg->deskripsi_singkat }}..</p>
               <a href="/beli/{{ $brg->namabarang }}" class="btn btn-primary">Lihat Detail</a>
             </div>

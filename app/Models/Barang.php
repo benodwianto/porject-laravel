@@ -14,7 +14,7 @@ class Barang extends Model
     public function scopeFilter($query, array $filters)
     {
         $query->when($filters['cari'] ?? false, function ($query, $cari) {
-            return $query->where('namabarang', 'like', '%' . $cari . '%')->orWhere('kategori_id', 'like', '%' . $cari . '%');
+            return $query->where('namabarang', 'like', '%' . $cari . '%');
         });
 
         $query->when($filters['kategori'] ?? false, function ($query, $kategori) {

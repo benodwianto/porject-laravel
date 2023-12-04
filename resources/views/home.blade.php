@@ -1,28 +1,7 @@
 @extends('layouts.main')
-
 @section('container')
 <main>
-  <nav class="navbar navbar-light bg-light mb-4 mt-10">
-    <div class="container-fluid">
-        <div class="dropdown">
-          <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-            Pilih Kategori
-          </a>
-        
-          <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-            <li><a class="dropdown-item" href="/belis?kategori={{ $barang[0]->kategori->nama_kategori }}">{{ $barang[0]->kategori->nama_kategori }}</a></li>
-            <li><a class="dropdown-item" href="/belis?kategori={{ $barang[1]->kategori->nama_kategori }}">{{ $barang[1]->kategori->nama_kategori }}</a></li>
-            <li><a class="dropdown-item" href="/belis?kategori={{ $barang[2]->kategori->nama_kategori }}">{{ $barang[2]->kategori->nama_kategori }}</a></li>
-          </ul>
-        </div>
-      <form class="d-flex" action="/belis">
-        <input class="form-control me-2" name="cari" type="search" placeholder="Cari Barang.." aria-label="Search" style="width: 500px">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
-    </div>
-  </nav>
-
-  <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+  <div id="myCarousel" class="carousel slide mt-20" data-bs-ride="carousel">
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
       <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
